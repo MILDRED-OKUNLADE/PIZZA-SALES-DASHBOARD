@@ -26,7 +26,7 @@ The Stakeholders have requested the following Insights on the dashboard:
 
 ## Data Sourcing
 
-After effectively communicating with the Stakeholders to clearly understand their reporting requirements and expectations i went ahead to source for the data. internally.I then downloaded the excel file,extracting in to PowerBI for Cleaning, Modelling, Analysis and Visualization.
+After effectively communicating with the Stakeholders to clearly understand their reporting requirements and expectations i went ahead to source for the data. internally.I then downloaded the excel file studied it properly to understand the dataset before extracting in to PowerBI for Cleaning, Modelling, Analysis and Visualization.
 
 The downloaded Excel file is a structured data and made up of 4 tables (Sheets) as follows:
 
@@ -37,3 +37,47 @@ Table 2. PIZZA PRICE - With 97 rows and 4 Columns.
 Table 3. ORDER DETAILS - With 48,621 rows and 4 Columns.
 
 Table 4. PIZZA TYPES - With 33 rows and 4 Columns.
+
+## Data Transformation/Cleaning :
+
+The four tables were then loaded on Power Query editor of POWERBI where Table 2-4 were merged (Join) into Table one using the Primary and Foreign keys for the join and only Table one loaded on POWERBI  .see screen shot below:
+
+<img width="527" alt="Table_Merging" src="https://user-images.githubusercontent.com/119946458/222804752-dc3e2d14-acfb-4d2e-9322-0f4edcae2fee.png">
+
+
+Also to clean and transform the data after merging some of the applied steps taken included;
+
+- Promoting first row as header in the ORDER Table.
+- Amending the header name for Price as Unit Price.
+- Created a custom column for "Actual Price" using custom column formular Actual Price = [Unit price]*[quantity] data type changed from to whole numbers.
+- Data Type was changed from decimal to whole numbers.
+- Created a new measure to calculate the Total revenue,Total Order and Total Quantity sold using the below DAX Formular; - 
+
+  TOTAL REVENUE = SUM(Orders[Actual Price])
+  
+  TOTAL ORDER   = COUNT(Orders[order_id])
+  
+  TOTAL QTY SOLD= SUM(Orders[quantity])
+ - Transform date in a new column to "Name of days" and also "days of week"
+ - Created a new column with the time column provided using the DAX formular - Time Of The Day = IF(Orders[time] < 12, "MORNING", "AFTERNOON")
+ - Created a new column to show the various time of the day using DAX see syntax below;
+  
+  <img width="660" alt="Time Dax" src="https://user-images.githubusercontent.com/119946458/222837142-b1c90465-6d33-4ea7-83de-5aab347317e5.png">
+  
+ - Close and apply steps.
+
+## Data Modelling
+
+Since i already merged the tables into a single table fom the start there was no data modelling to be done.
+
+<img width="406" alt="Data Modelling" src="https://user-images.githubusercontent.com/119946458/222838225-f4586d27-b99b-4457-911e-a6c576759e85.png">
+
+## Data Analysis and Visuals
+
+<img width="596" alt="Pizza_Dashboard" src="https://user-images.githubusercontent.com/119946458/222840343-cd451519-5402-4f0b-b283-2374984cd639.png">
+
+
+
+
+
+
