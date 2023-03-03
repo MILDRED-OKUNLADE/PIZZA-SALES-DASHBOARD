@@ -76,6 +76,11 @@ Since i already merged the tables into a single table fom the start there was no
 
 <img width="596" alt="Pizza_Dashboard" src="https://user-images.githubusercontent.com/119946458/222840343-cd451519-5402-4f0b-b283-2374984cd639.png">
 
+The report consist of 3 pages. You can interact with the report [here](https://app.powerbi.com/groups/me/reports/a477f852-cba1-4eca-bbc4-fc7adfeb5bbc/ReportSection)
+
+
+
+
 
 
 
