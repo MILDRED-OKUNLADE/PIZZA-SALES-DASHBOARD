@@ -112,6 +112,8 @@ However using the data for the  year 2015 provided the following recommendations
 - Explore delivery services during the afternoon to expand its reach and increase sales.
 - consider giving discounts for the bottom 5 to increase sales.
 
+By implementing these recommendations, the company can improve its revenue, attract more customers, and increase sales.
+
 ## Limitations to analysis
 
 1. The data provided covered only one year.
